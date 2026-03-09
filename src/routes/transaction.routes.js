@@ -4,6 +4,6 @@ import { createInitialFundsTransation, createTransactionController } from '../co
 
 const router = express.Router();
 
-router.post("/transaction", authMiddlewear, createTransactionController);
+router.post("/tran", authMiddlewear, createTransactionController);
 router.post("/system/initial-funds", authSystemUserMiddlewear, createInitialFundsTransation)
 export default router;
