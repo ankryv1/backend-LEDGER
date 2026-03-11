@@ -81,7 +81,7 @@ Backend-Ledger Team`;
 export const sendTransactionEmail= async(userEmail, name, amount, toAccount) =>{
   const subject = "Transaction Successful";
   const text = `Hii ${name}, Your Transaction of ${amount} is complete`;
-  const html = `<p>Hello, Your Transation is complete of amount${amount}</p>`
+  const html = `<p>Hello, Your Transation is complete of amount ₹${amount}</p>`
 
   await sendEmail(userEmail, subject, text, html)
 }
@@ -97,3 +97,4 @@ export const sendTransactionFailureEmail = async (userEmail, name, amount, toAcc
 
   await sendEmail(userEmail, subject, text, html);
 };
+
